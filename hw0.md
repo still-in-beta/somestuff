@@ -67,7 +67,7 @@ Did you use vim or gvim in the previous command? If you used gvim, you may have 
 ANSWER HERE
 ```
 
-#### Advanced Text Manipulation
+### Advanced Text Manipulation
 <details> 
 	<summary><em><b>Learning Objective</b></em></summary>
 	<br>
