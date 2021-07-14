@@ -9,7 +9,7 @@ I'd like to teach for Attack-Defense CTFs rather than jeopardy, since I enjoy re
 
 #### For starters, how about name, grade, and experience so I can get a handle on things.
 ```
-*ANSWER HERE*
+I'm Elli, a 9th grader, with almost a year of cybersecurity experience.
 ```
 ### Let's try some quick practical knowledge.
 **FEEL FREE TO USE ALL RESOURCES AT YOUR DISPOSAL!**
@@ -37,7 +37,13 @@ Your home PC is running Windows. Describe how you would connect to your remote d
 </details>
 
 ```
-ANSWER HERE
+I'd go to the PuTTy Configuration window, and type:
+- Host Name: rickycorp.org
+- Port: 22
+- Connection type: SSH
+Then, I'd open the connection, and type into the terminal:
+> login as: remotedesktops
+> Password: rickyCorpPassword12345abcde
 ```
 
 Uh oh, your PC broke and you've decided to pick up a company laptop, running Ubuntu 20.04.2.0. It is an untouched and fresh installation, with no third party programs. You connect with the command ```ssh remotedesktops@rickycorp.org ``` , and you want to open and edit a file called welcomeFriend.md. What is the full command to do this?
@@ -47,7 +53,7 @@ Uh oh, your PC broke and you've decided to pick up a company laptop, running Ubu
 </details>
 
 ```
-ANSWER HERE
+nano welcomeFriend.md
 ```
 
 Did you use vim or gvim in the previous command? If you used gvim, you may have realized that you got a "could not display" error. How can you fix this, and why did it happen?
@@ -64,7 +70,8 @@ Did you use vim or gvim in the previous command? If you used gvim, you may have 
 </details>
 
 ```
-ANSWER HERE
+This is happening because X11 forwarding is disabled on the machine. X11 forwarding allows application displays to show up on a remote machine; which is why the GUI isn't displaying.
+To fix this: nano /etc/ssh/sshd_config, and then change the "X11Forwarding" and "X11UseForwarding" sections to "yes". Then, restart the ssh service using the command "service sshd start".
 ```
 
 ### Advanced Text Manipulation
@@ -117,3 +124,4 @@ Let's fix your boss's mistake!
 	<br>
 	The passwords start with a string they all have in common: 'rickyCorpPassword' and end with a random unique string. This means we want to use a wildcard in our search.
 </details>
+
